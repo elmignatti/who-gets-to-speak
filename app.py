@@ -253,4 +253,28 @@ if not match_df.empty:
         use_container_width=True
     )
 
-###
+st.subheader("My Process")
+
+process_col1, process_col2, process_col3 = st.columns([1, 1, 1])
+
+with process_col1:
+    st.markdown("##### Read Scripts")
+    st.write("""
+    1. Used a list of Best Picture winners & year won to generate links to pdfs from Scriptslug
+    2. Read in each pdf as a txt file
+    """ )
+with process_col2:
+    st.markdown("##### Analyze")
+    st.write("""
+    1. Parsed text to match each line with the character name
+    2. Matched each character name to their actor & gender using TMDB
+    3. Found the total line count and word count by gender
+    """ )
+with process_col3:
+    st.markdown(" ##### Visualize")
+    st.write("""
+    1. Create website using Streamlit
+    2. Create plots (interactive dotplot, barchart) & searchable dataset
+    3. Format, add text and year filters
+    4. Deploy app
+    """ )
